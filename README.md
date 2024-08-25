@@ -1,7 +1,9 @@
 # Gsoc 2024 Report
 ## Project Goals
-[-] Organization: [CCExtractor Developement](https://summerofcode.withgoogle.com/programs/2024/organizations/ccextractor-development)
-[-] Project Link: [Create nix derivations for Regolith Linux ](hhttps://summerofcode.withgoogle.com/programs/2024/projects/kWEY5sJj)
+
+Organization: [CCExtractor Developement](https://summerofcode.withgoogle.com/programs/2024/organizations/ccextractor-development)
+
+Project Link: [Create nix derivations for Regolith Linux ](https://summerofcode.withgoogle.com/programs/2024/projects/kWEY5sJj)
 
 ## Project Description
 The project aims to integrate Regolith Linux (mordern desktop enviroment build on top of GNOME with i3 and sway window managers) into NixOS, an operting system with a declarative and reproducible configuration model. 
