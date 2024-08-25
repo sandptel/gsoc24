@@ -1,13 +1,13 @@
 # Gsoc 2024 Report
 ## Project Goals
-[-] Organization: [CCExtractor Developement](https://summerofcode.withgoogle.com/programs/2024/organizations/ccextractor-development)
+- Organization: [CCExtractor Developement](https://summerofcode.withgoogle.com/programs/2024/organizations/ccextractor-development)
 
-[-] Project Link: [Create nix derivations for Regolith Linux ](https://summerofcode.withgoogle.com/programs/2024/projects/kWEY5sJj)
+- Project Link: [Create nix derivations for Regolith Linux ](https://summerofcode.withgoogle.com/programs/2024/projects/kWEY5sJj)
 
 ## Project Description
 The project aims to integrate Regolith Linux (mordern desktop enviroment build on top of GNOME with i3 and sway window managers) into NixOS, an operting system with a declarative and reproducible configuration model. 
 
-The goal of this project was to create a bootable session out of nix derivations of required applications/bash scripts/systemd services and config files. So that finaly the whole package should be linked to a nixos module using which regolith linux can be installed and customized with a single nixos configuration option (`desktopEnvironment.wayland.regolith.enable=true;`)
+The goal of this project was to create a bootable session out of nix derivations of required applications/bash-scripts/systemd services and config files. So that finaly the whole package should be linked to a nixos module using which regolith linux can be installed and customized with a single nixos configuration option (`desktopEnvironment.wayland.regolith.enable=true;`)
 
 ## Final Outcome
 Final Outcome of the project is to have a completely working regolith desktop environment completely modifiable via nix config. Example :
@@ -55,3 +55,7 @@ Currently I have created working derivations for
 - remontoire
 - i3xrocks
 - xrescat
+
+
+
+
