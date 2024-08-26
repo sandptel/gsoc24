@@ -95,4 +95,42 @@ Repository linking regolith-session working nix flake file - https://github.com/
 $ regolith-session-wayland
 ```
 
+#### Testing Single Packaged applications on Nixos/Any other distribution
+##### Nixos 
+` nix run github:sandptel/<application-name>`
+##### Other Distributions
+1. Intalling Nix
+```
+sh <(curl -L https://nixos.org/nix/install) --no-daemon
+ . ~/.nix-profile/etc/profile.d/nix.sh
+export NIX_CONFIG="experimental-features = nix-command flakes"
+```
+2. Running the application
+``` nix run nix run github:sandptel/<application-name>```
+
+<application name>
+- regolith-session
+- trawld
+- ilia
+- remontoire
+- i3xrocks
+- xrescat
+- regolith-displayd
+- regolith-inputd
+- regolith-powerd
+- sway-regolith
+
+These applications does not have a binary or have multiple binaries or have config files only.
+- libtrawldb 
+- regolith-sway-root-config
+- regolith-look-default
+- regolith-wm-config
+- rofication
+
+Therefore you can create devshells from the regolith-nix flake file to
+test all the application singularly.
+
+`nix develop github:sandptel/regolith-nix` 
+
+which will create a tmp devShell with all the derivations present.
 
