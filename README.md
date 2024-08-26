@@ -133,5 +133,5 @@ test all the application singularly.
 
 `nix develop github:sandptel/regolith-nix` 
 
-which will create a tmp devShell with all the derivations present.
+This will create a tmp devShell with all the derivations present.
 
