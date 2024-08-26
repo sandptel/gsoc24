@@ -61,7 +61,10 @@ I have created a bootable version of regolith-session-wayland on nixos.
 Repository linking regolith-session working nix flake file - https://github.com/sandptel/regolith-nix
 
 #### How to test/use the bootable version of regolith-session
-1. First link the regolith-nix url(https://github.com/sandptel/regolith-nix) to flake.nix and add the nixos module `inputs.regolith.nixosModules.regolith`
+1. Add experimental features option to nixos configuration option
+`nix.settings.experimental-features = [ "nix-command" "flakes" ];`
+
+2. Link the regolith-nix url(https://github.com/sandptel/regolith-nix) to flake.nix and add the nixos module `inputs.regolith.nixosModules.regolith`
 ```
 {
   description = "A very basic flake";
