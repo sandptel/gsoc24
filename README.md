@@ -55,7 +55,41 @@ Currently I have created working derivations for
 - remontoire
 - i3xrocks
 - xrescat
+ 
+### Regolith-Session
+I have created a bootable version of regolith-session-wayland on nixos.
+Repository linking regolith-session working nix flake file - https://github.com/sandptel/regolith-nix
 
+#### How to test/use the bootable version of regolith-session
+1. First link the regolith-nix url(https://github.com/sandptel/regolith-nix) to flake.nix and add the nixos module `inputs.regolith.nixosModules.regolith`
+```
+{
+  description = "A very basic flake";
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+     regolith.url = "path:/home/roronoa/Documents/regolith-nix";   
+  };
+  outputs = { self,nixpkgs,home-manager, ... }@inputs: 
+  let 
+  system = "x86_64-linux";
+  pkgs = nixpkgs.legacyPackages.${system};
+  in
+  {
+    nixosConfigurations.roronoa = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit system inputs;};
+      modules = [
+        ./configuration.nix
+        ./hardware-configuration.nix
+        inputs.regolith.nixosModules.regolith
+      ];
+    };
+  };
+}
+```
 
+2. launch the regolith-session-wayland binary to launch the session.
+```
+$ regolith-session-wayland
+```
 
 
