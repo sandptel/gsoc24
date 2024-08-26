@@ -108,24 +108,25 @@ export NIX_CONFIG="experimental-features = nix-command flakes"
 2. Running the application
 ``` nix run nix run github:sandptel/<application-name>```
 
-<application name>
-- regolith-session
-- trawld
-- ilia
-- remontoire
-- i3xrocks
-- xrescat
-- regolith-displayd
-- regolith-inputd
-- regolith-powerd
-- sway-regolith
+##### <application name>
+
+1. regolith-session
+2. trawld
+3. ilia
+4. remontoire
+5. i3xrocks
+6. xrescat
+7. regolith-displayd
+8. regolith-inputd
+9. regolith-powerd
+10. sway-regolith
 
 These applications does not have a binary or have multiple binaries or have config files only.
-- libtrawldb 
-- regolith-sway-root-config
-- regolith-look-default
-- regolith-wm-config
-- rofication
+11. libtrawldb 
+12. regolith-sway-root-config
+13. regolith-look-default
+14. regolith-wm-config
+15. rofication
 
 Therefore you can create devshells from the regolith-nix flake file to
 test all the application singularly.
