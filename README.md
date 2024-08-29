@@ -38,7 +38,7 @@ Using derivations we essentially want to map the outputs of these derivations to
 
 Nix provides its own set of tools and methods to help create perfectly reproducible packages. More explanation here - https://nix.dev/
 
-## Work Done
+## Work Done (https://github.com/sandptel/regolith-nix)
 Currently I have created working derivations for 
 - regolith-session
 - trawld
